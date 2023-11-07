@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lista de tarefas</title>
+
+		<!-- jQuery -->
+		<script src="static/js/jquery-3.7.1.min.js"></script>
+		<!-- jQuery UI -->
+		<script src="static/js/jquery-ui.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="static/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="static/css/bootstrap.min.css" />
+		<!-- DayJS -->
+		<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/e8aef84763.js" crossorigin="anonymous"></script>
+		<!-- Local CSS -->
+		<link rel="stylesheet" href="static/css/style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<div class="row">
+					<!-- To do -->
+					<div class="col-md-4">
+						<h3 class="text-center">A fazer</h3>
+						<div id="todo">
+							<!-- task to do will be here -->
+						</div>
+					</div>
+
+					<!-- Done -->
+					<div class="col-md-4">
+						<h3 class="text-center">Concluído</h3>
+
+						<div id="done">
+							<!-- tasks done will be here -->
+						</div>
+					</div>
+
+					<!-- Uncompleted -->
+					<div class="col-md-4">
+						<h3 class="text-center">Não Concluído</h3>
+
+						<div id="pendent">
+							<!-- tasks uncompleted will be here -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Modal to create/edit task -->
+		<div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="taskModalLabel">Adicionar Tarefa</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<form id="taskForm" novalidate>
+						<div class="modal-body">
+							<!-- Title -->
+							<div class="mb-3">
+								<label for="titleInput" class="form-label">Título</label>
+								<input type="text" name="title" class="form-control" id="titleInput" required />
+								<div class="invalid-feedback">Por favor, informe um título.</div>
+							</div>
+
+							<!-- Description -->
+							<div class="mb-3">
+								<label for="descriptionInput" class="form-label">Descrição</label>
+								<input type="text" name="description" class="form-control" id="descriptionInput" required />
+								<div class="invalid-feedback">Por favor, informe uma descrição.</div>
+							</div>
+
+							<!-- Date -->
+							<div class="mb-3">
+								<label for="dateInput" class="form-label">Data</label>
+								<input type="date" name="date" class="form-control" id="dateInput" />
+								<div class="invalid-feedback">Por favor, informe uma data válida.</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+							<button type="submit" class="btn btn-primary" id="submitTask">Salvar Tarefa</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Button to add tasks -->
+		<div class="btn btn-primary btn-lg add-task-button" data-bs-toggle="modal" data-bs-target="#taskModal">
+			<i class="fa-solid fa-plus"></i>
+		</div>
+
+		<!-- Local JS -->
+		<script src="static/js/script.js"></script>
+	</body>
+</html>

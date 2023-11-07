@@ -1,0 +1,80 @@
+@media (max-width: 768px) {
+	h3 {
+		display: none;
+	}
+
+	.col-md-4 {
+		padding: 0;
+	}
+}
+
+.col-2.taskIcon {
+	text-align: center;
+	padding: 15px;
+
+	background-color: rgb(0, 86, 179);
+	color: #fff;
+
+	cursor: pointer;
+	transition: background-color 0.2s, color 0.2s;
+}
+
+.col-2.taskIcon:active {
+	background-color: rgba(0, 86, 179, 0.5);
+}
+
+.card {
+	border: none;
+	border-radius: 0;
+
+	background-color: rgb(248, 245, 245);
+}
+
+.iconGap i {
+	color: black;
+
+	height: 32px;
+	width: 32px;
+
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.iconGap .btn {
+	border-radius: 100%;
+	padding: 0;
+}
+
+.fa-trash {
+	background-color: rgb(219, 54, 70);
+}
+
+.fa-pen-to-square {
+	background-color: rgb(255, 193, 5);
+}
+
+.fa-xmark {
+	background-color: rgba(220, 56, 73, 0.9);
+}
+
+.fa-check {
+	background-color: rgba(25, 134, 83, 0.9);
+}
+
+.fa-clock {
+	background-color: rgba(128, 128, 128, 0.9);
+}
+
+.dateMargin i {
+	margin-right: 5px;
+}
+
+.add-task-button {
+	position: fixed;
+	padding-inline: 15px;
+	padding-block: 10px;
+	bottom: 50px;
+	right: 30px;
+}
